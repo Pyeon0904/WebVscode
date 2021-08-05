@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>표 관련 태그</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>표 관련 태그</h1>
+        <hr>
+
+        <h2>table 태그</h2>
+        <p>
+            웹 문서에서 자료를 정리할 때 주로 사용<br>
+            행과 열로 이루어져 있고 행과 열이 만나는 지점을 셀이라고 함<br>
+            <br>
+            [행렬 지정 태그]<br>
+            tr 태그 : 한 개의 행을 만드는 태그<br>
+            td 태그 : 한 개의 열을 만드는 태그
+        </p>
+
+        <h3>테이블의 기본 사용</h3>
+        <!-- tr : 행(가로) / td : 열(세로) -->
+        <table>
+            <tr>
+                <td>홍길동</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>김길동</td>
+                <td>30</td>
+            </tr>
+        </table>
+
+        <h3>테이블에 테두리 지정 : border</h3>
+        <!-- [border = "숫자"] : 숫자는 해당 표의 테두리 굵기를 나타낸다! -->
+        <table border="1">
+            <tr>
+                <td>홍길동</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>김길동</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>이길동</td>
+                <td>30</td>
+            </tr>
+        </table>
+
+        <h3>테이블에 제목 지정 태그 : caption 태그</h3>
+        <table border="1">
+            <caption>회원</caption>
+            <tr>
+                <td>홍길동</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>김길동</td>
+                <td>30</td>
+            </tr>
+        </table>
+
+        <h3>테이블에 제목 셀 지정 태그 : th 태그</h3>
+        <table border="1">
+            <caption>회원</caption>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>김길동</td>
+                <td>30</td>
+            </tr>
+        </table>
+
+        <h3>열 병합 속성 : colspan</h3>
+        <table border="1">
+            <tr>
+                <td>안녕</td>
+                <td>하이</td>
+            </tr>
+            <tr>
+                <td colspan="2">안녕하세요</td>
+            </tr>
+        </table>
+
+        <h3>행 병합 속성 : rowspan</h3>
+        <table border="1">
+            <tr>
+                <td rowspan="3">행 합치기</td>
+                <td>하하</td>
+            </tr>
+            <tr>
+                <td>호호</td>
+            </tr>
+            <tr>
+                <td>후후</td>
+            </tr>
+        </table>
+
+        <h3>테이블 전체를 정렬해주는 속성 : align</h3>
+        <table border="1" align="center">
+            <tr>
+                <td>이름</td>
+                <td>나이</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>20</td>
+            </tr>
+        </table>
+
+        <h3>테이블 스타일 지정 속성 : style</h3>
+        <p>
+            넓이 지정 : width,
+            높이 지정 : height,
+            글자 정렬 : text-align
+        </p>
+        
+        <table border="1" style="width:500px; text-align:center;">
+            <tr style="height:50px;">
+                <th>번호</th>
+                <th style="width:400px;">글제목</th>
+                <th>글쓴이</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td style="text-align: left;">안녕하세요</td>
+                <td>홍길동</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td style="text-align: right;">두번째 글이네요~</td>
+                <td>김길동</td>
+            </tr>
+        </table>
+
+
+        <br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
+    </body>
+</html>
