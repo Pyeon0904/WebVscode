@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>전역속성 실습</title>
+        <meta charset="UTF-8">
+
+        <!-- CSS를 간단히 실습해보겠습니다. -->
+        <!-- "id명"을 불러올 때에는 앞에 '#'을 붙입니다. -->
+        <!-- "class명"을 불러울 때에는 앞에 '.'을 붙입니다. -->
+
+        <style>
+            #top_logo{
+                color: red;
+                text-align: center;
+            }
+
+            .bottom{
+                background-color: gray;
+                color: white;
+                text-align: center;
+            }
+
+            .menu{background-color: gray;}
+
+            #banner{
+                color: blue;
+                font-size: 30px;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <header id="top_logo">
+            <h1>WebFront 정복!</h1>
+        </header>
+
+        <nav class="menu">
+            홈 | 게시판 | 로그인 | 회원가입
+        </nav>
+
+        <section>
+            <div id="banner">HTML 공부를 열심히하자!</div>
+            <div hidden>추가설명은 여기에 올거에요~</div>
+        </section>
+        
+        <footer class="bottom">
+            Posted by : Junjang
+        </footer>
+
+    </body>
+</html>
