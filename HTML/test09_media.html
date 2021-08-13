@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>멀티미디이 관련 태그</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>멀티미디어 관련 태그</h1>
+        <hr>
+
+        <h2>이미지 태그(img)</h2>
+        <p>
+            웹페이지에 사진이나 그림을 삽입할 때 사용하는 태그<br>
+            이미지는 기술적으로 HTML 페이지에 삽입이 되지 않는다!<br>
+            --> 따라서 링크를 이용해 이미지 파일을 별도로 가져와 표시해준다! 
+        </p>
+
+        <h3>이미지 삽입 1 : 다른 사이트 이미지 주소 복사</h3>
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+
+        <h3>이미지 삽입 2 : 이미지 파일을 서버에 저장</h3>
+        <p>서버의 특정 경로에 이미지 파일 저장 : resources/images/파일명.jpg or png</p>
+        <img src="../resources/images/Pyeon.png">
+
+        <h3>이미지 삽입 3 : 이미지 설명 텍스트 지정</h3>
+        <p>이미지가 제대로 표시되지 않는 경우에만 텍스트 표시됨</p>
+        <!-- 이미지가 정상적으로 뜨면 alt 문구가 안 나오고, 비정상적으로 뜨면 문구가 나오게 됨 -->
+        <img src="" alt="이미지를 불러오는 데 실패했습니다.">
+
+        <hr>
+        <h2>map 태그</h2>
+        <p>
+            이미지를 구역별로 나누어 링크를 걸어주는 태그<br>
+            영역을 지정하는 별도의 map을 만들어 놓고 img 태그에서 해당 map을 지정
+            (usemap 속성)해서 사용
+        </p>
+
+        <h3>이미지에 링크 지정</h3>
+        <img src="../resources/images/Pyeon.png" usemap="#maptest">
+        <!-- 일정 범위의 위치를 마우스로 클릭하면 'naver.com'로, -->
+        <!-- 나머지 부분을 마우스로 클릭하면 내가 만든 semantic.html 로 가게한다! -->
+        <!-- x, y 좌표 크기를 모르니 그림판에 그림을 두고 px값을 찾아준다! -->
+        <!-- target="_blank"는 클릭시 새로운 창이 열리게끔 해줌! -->
+        <map name="maptest">
+            <area shape="rect" coords="0,0,100,100" href="http://www.naver.com">
+            <area shape="rect" coords="100,0,417,417" href="../HTML/test06_semantic.html" target="_blank">
+        </map>
+        
+        <hr>
+        <h2>오디오 태그(audio)</h2>
+        <p>
+            웹 브라우저에서 프러그인의 도움없이 음악을 재생할 수 있게 만들어주는 태그<br>
+            - controls : 재생할 수 있는 버튼이 나오게 해준다. <br>
+            - autoplay : 해당 웹페이지가 열리면 바로 음악이 재생되게 해준다.
+        </p>
+        <audio src="../resources/audio/ChittyChittyBangBang_이승윤.mp3" controls autoplay loop>
+            (웹브라우저가 audio 태그를 지원하지 않을 때 표시할 문구)
+        </audio>
+
+        <hr>
+        <h2>비디오 태그(video)</h2>
+        <p>
+            웹 브라우저에서 프러그인의 도움없이 미디어를 재생할 수 있게 만들어주는 태그
+        </p>
+        <h3>동영상 재생 1 : 컨트롤 표시 (controls)</h3>
+        <video src="../resources/video/동기부여.mp4" controls>
+            (웹브라우저가 video 태그를 지원하지 않을 때 표시할 문구)
+        </video>
+
+        <h3>동영상 재생 2 : 재생 전 출력할 이미지 지정(poster), 크기지정(width/height)</h3>
+        <video src="../resources/video/동기부여.mp4" controls
+                    poster="../resources/images/Pyeon.png" width="300px">
+                    영상을 지원하지 않습니다.
+        </video>
+    </body>
+</html>
