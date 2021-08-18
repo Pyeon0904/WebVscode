@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>폼 입력 양식 요소</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>폼 입력 양식 요소</h1>
+        <hr>
+        <h2>input 태그</h2>
+        <p>사용자가 데이터를 입력할 수 있는 입력 필드를 지정</p>
+
+        <input>
+            <legend>기본 type 속성</legend>
+            <h3>text type 속성</h3>
+            한 줄 짜리 텍스트 입력창이 생김<br>
+            이름 : <input type="text" name="u_name"><br>
+            전화번호 : <input type="text" name="u_tel" value="010-" size="13" maxlength="13">
+            <!-- value는 기존에 쓰여있게 할 값!-->
+            <!-- size는 입력 칸의 크기 설정! / maxlength는 최대로 입력할 수 있는 값의 길이 지정! -->
+        
+            <h3>submit type / reset type 속성</h3>
+            submit : 입력한 데이터를 다른 페이지로 넘기는 기능<br>
+            reset  : 입력한 내용을 지우는(리셋) 기능 <br>
+            <form method="GET" action="test11_link.html">
+                아이디    : <input type="text" name="u_id"><br>
+                비밀번호  : <input type="text" name="u_pass"><br>
+                <input type="submit" value="로그인">
+                <input type="reset" value="다시입력">
+                <!-- GET 방식으로 url 부분에 test11_link.html?u_id=~~~&u_pass=~~~라고 나오며 창이 넘어간다 -->
+            </form>
+
+            <h3>password type 속성</h3>
+            비밀번호 입력 창, 입력 시 ****으로 표시됨
+            <form method="GET" action="../HTML/test11_link.html">
+                아이디     : <input type="text" name="u_id"><br>
+                비밀번호   : <input type="password" name="u_pass"><br>
+                <input type="submit" value="로그인">
+            </form>
+
+            <h3>hidden type 속성</h3>
+            - 사용자에게 보여지지는 않지만 값을 넣어서 전달할 수 있는 필드<br>
+            - 보통 관리자에게 필요한 값을 넣을 때 사용<br>
+            <input type="hidden" name="secret" value="abc">
+
+            <h3>checkbox type 속성</h3>
+            <input type="checkbox" name="check1" value="치킨">치킨
+            <input type="checkbox" name="check1" value="피자">피자
+            <input type="checkbox" name="check1" value="떡볶이" checked>떡볶이
+            <!-- 기본적으로 체크가 되어있길 원하면 뒤에 "checked" 작성! -->
+
+            <h3>radio type 속성</h3>
+            <input type="radio" name="check1" value="치킨">치킨
+            <input type="radio" name="check1" value="피자">피자
+            <input type="radio" name="check1" value="떡볶이" checked>떡볶이
+            <!-- radio는 중복으로 체크가 안된다는 점을 기억! -->
+
+            <h3>file type 속성</h3>
+            <input type="file" name="upfile1">
+            <!-- 파일을 업로드 시켜줄 버튼이 생성! -> 파일 선택하면 파일명 옆에 같이 나옴 -->
+            <input type="file" name="upfile2" multiple>
+
+            <h3>image type 속성</h3>
+            <input type="image" name="img" src="../resources/images/Pyeon.png"
+                onclick="javascript:alert('hi');"> <!-- 이미지를 클릭하면 메시지가 나옴!-->
+            
+            <h3>button type 속성</h3>
+            <input type="button" name="btn" value="중복확인" onclick="javascript:alert('중복된 아이디입니다.');">
+        </fieldset>
+        
+    </body>
+</html>
