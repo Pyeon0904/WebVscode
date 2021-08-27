@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>CSS 기본 선택자</title>
+        <meta charset="UTF-8">
+
+        <style>
+            /* CSS 주석 */
+
+            /* 모든 선택자 : ' * ' 기호를 사용함 */
+            *{color: red;} /* 모든 글자가 빨갛게 변함! */
+
+            /* 태그 선택자 */
+            p{color: blue;}
+
+            /* id 선택자 */
+            #id2 { color: green;}
+            #id4 { background-color: yellow; color: orange;}
+
+            /* class 선택자 */
+            .class1{
+                background-color: gray;
+                color: purple;
+            }
+            .class2{ color : orangered; }
+        </style>
+    </head>
+    <body>
+        <h1>CSS 기본 선택자</h1>
+        <p>선택자 : 특정한 HTML 태그를 선택할 때 사용하는 기능</p>
+        
+        <hr>
+        
+        <h2>모든 선택자</h2>
+        <p>HTML 문서 안의 모든 태그를 선택</p>
+        <pre> * {color : red} 와 같은 형태로 사용됨</pre>
+        <ul>
+            <li>테스트1</li>
+            <li>테스트2</li>
+            <li>테스트3</li>
+        </ul>
+        
+        <hr>
+        
+        <h2>태그 선택자</h2>
+        <p>HTML 문서 내에 같은 태그를 모두 선택</p>
+        <pre> p { color : blue; }와 같은 형태로 사용됨</pre>
+        <!-- p태그에 대해서만 색이 변하도록! -->
+
+        <hr>
+
+        <h2>아이디 선택자</h2>
+        <p>HTML 문서 내에 해당하는 아이디 속성 값은 가진 태그만 선택</p>
+        <pre> #아이디명 { color : green; }와 같은 형태로 사용됨</pre>
+        <ol>
+            <li id="id1">아이디 선택자 테스트1</li>
+            <li id="id2">아이디 선택자 테스트2</li>
+            <li id="id3">아이디 선택자 테스트3</li>
+            <li id="id4">아이디 선택자 테스트4</li>
+            <li id="id5">아이디 선택자 테스트5</li>
+        </ol>
+
+        <hr>
+
+        <h2>클래스 선택자</h2>
+        <p>HTML 문서 내에 여러 개의 태그를 동일한 클래스명으로 지정해 선택 가능</p>
+        <pre> .클래스명 { color : purple; } 와 같은 형태로 사용됨</pre>
+        <ul>
+            <li class="class1">클래스 선택자 테스트1</li>
+            <li class="class2">클래스 선택자 테스트2</li>
+            <li class="class1">클래스 선택자 테스트3</li>
+            <li class="class2">클래스 선택자 테스트4</li>
+            <li class="class1">클래스 선택자 테스트5</li>
+        </ul>
+
+    </body>
+</html>
