@@ -1,0 +1,46 @@
+<!-- "!" 입력 후 TAB 키 -> html 전체 폼 완성 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- css 파일 연결시키기-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+
+    <title>Nav bar</title>
+    <!-- 사용하려는 Font awesome 아이콘 사용 대표링크-->
+    <script src="https://kit.fontawesome.com/cc18e3ecc9.js" crossorigin="anonymous"></script>
+    
+    <!-- js 파일 연결시키기-->
+    <!-- defer: 이렇게만 넣어두면 모든 파일 다 받을 때까지 html 파일에 적용이 안되는데 이를 방지하기 위해 사용-->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="fas fa-rocket"></i>
+            <a href="">DreamCoding</a>
+        </div>
+        <ul class="navbar__menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Wedding</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Bookings</a></li>
+        </ul>
+        <ul class="navbar__icons">
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+        </ul>
+
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+    
+</body>
+</html>
